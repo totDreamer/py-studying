@@ -14,4 +14,4 @@ def is_infection(*,  key_word : str):
     return " ".join(final_list)
 
 
-print(is_infection(key_word = input()))
+print(is_infection(key_word = "anton"))

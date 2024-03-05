@@ -20,4 +20,3 @@ for i in range(len(matrix_result)):
         print()
     for j in range(len(matrix_result[i])):
         print(" ".join(matrix_result[i][j]))
-

@@ -9,4 +9,3 @@ def matrix_track(*, num : int):
 
 
 print(matrix_track(num=int(input())))
-

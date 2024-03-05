@@ -8,4 +8,4 @@ def pascal(*, num : int):
     return triangle_pascal[num]
 
 
-print(pascal(num = 0))
+print(pascal(num = int(input())))

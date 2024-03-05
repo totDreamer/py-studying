@@ -20,3 +20,5 @@ print(error_name.lstrip().upper())
 print(error_name.strip().title())
 
 print("Invoker said: \n\t'Education has the power'")
+
+# 05.03.24 вышел на больничный, привожу в порядок структуру своих файлов

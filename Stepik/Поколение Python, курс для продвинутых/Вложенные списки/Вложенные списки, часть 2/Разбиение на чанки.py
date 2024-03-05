@@ -6,4 +6,4 @@ def chunk(*, list : str, n : int):
         list = list[n:]
     return final_list
 
-print(chunk(list = "a b c d e f", n = 3))
+print(chunk(list = input(), n = int(input())))
