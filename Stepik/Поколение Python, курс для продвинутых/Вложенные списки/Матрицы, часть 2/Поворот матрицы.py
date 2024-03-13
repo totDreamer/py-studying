@@ -1,9 +1,14 @@
-def reverse(*, num : int):
-    matrix = [input().split() for n in range(num)]
+def rev(*, num : int):
+    matrix = [input().split() for _ in range(num)]
+    new_matrix = [["" for _ in range(num)] for _ in range(num)]
     for i in range(num):
         for j in range(num):
-            matrix[i][j], matrix[num - j - 1][i] = matrix[num - j - 1][i], matrix[i][j]
-    return matrix
+            new_matrix[i][j] = matrix[j][i]
+    for i in range(num):
+        new_matrix[i].reverse()
+    return new_matrix
 
 
-print(reverse(num=int(input())))
+final = rev(num=int(input()))
+for ans in final:
+    print(*ans)
