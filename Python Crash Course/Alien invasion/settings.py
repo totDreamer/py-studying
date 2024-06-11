@@ -9,7 +9,7 @@ class Settings:
         self.bg_color = (25, 25, 112)
         # Settings for bullet
         self.bullet_speed = 0.5
-        self.bullets_allowed = 2
+        self.bullets_allowed = 5
         self.bullet_width = 3
         self.bullet_height = 15
         self.bullet_color = (0, 255, 0)

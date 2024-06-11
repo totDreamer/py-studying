@@ -19,10 +19,9 @@ class AlienInvasion:
         self.aliens = pygame.sprite.Group()
         self.bullets = pygame.sprite.Group()
         self.stars = pygame.sprite.Group()
-        pygame.display.set_caption("Alien Invasion")
-
         self._create_stars()
         self._create_fleet()
+        pygame.display.set_caption("Alien Invasion")
 
     def run_game(self):
         """Run the game"""
@@ -50,6 +49,17 @@ class AlienInvasion:
         for bullet in self.bullets.copy():
             if bullet.rect.bottom <= 0:
                 self.bullets.remove(bullet)
+        # Checking Alien Hit
+        # If a hit is detected, remove the projectile and the alien
+        self._check_bullet_alien_collisions()
+
+    def _check_bullet_alien_collisions(self):
+        """Checking Alien Hit, remove it and build new fleet"""
+        collisions = pygame.sprite.groupcollide(self.bullets, self.aliens, True, True)
+        if not self.aliens:
+            # Destroy bullets and make new fleet
+            self.bullets.empty()
+            self._create_fleet()
 
     def _update_aliens(self):
         """Updates alien on fleet"""
@@ -114,7 +124,7 @@ class AlienInvasion:
 
         # Determines the number of rows that fit on the screen
         ship_height = self.ship.rect.height
-        available_space_y = self.settings.screen_height - (3 * alien_height) - ship_height
+        available_space_y = self.settings.screen_height - (5 * alien_height) - ship_height
         number_rows = available_space_y // (2 * alien_height)
 
         # Create a fleet
