@@ -20,7 +20,7 @@ class Bullet(Sprite):
     def update(self):
         """Updates the bullet position"""
         # Update in float format
-        self.y -= self.settings.bullet_speed
+        self.y -= self.settings.bullet_speed_factor
         # Update rectangle position
         self.rect.y = self.y
 
