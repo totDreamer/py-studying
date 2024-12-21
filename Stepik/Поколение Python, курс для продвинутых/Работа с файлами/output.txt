@@ -1,1 +1,29 @@
-Тестовая строка
+Black goat
+Pink goat
+COLOURS
+Pink goat
+Green goat
+Black goat
+GOATS
+Pink goat
+Pink goat
+Black goat
+Pink goat
+Pink goat
+Black goat
+Green goat
+Pink goat
+Black goat
+Black goat
+Pink goat
+Pink goat
+Black goat
+Black goat
+Pink goatтелефон	4	12500
+бургер	1	500
+курс	1	1400
+подписка	40	9500
+наушники	2	22450
+телефон	2	2500
+ноутбук	5	155000
+диван	100	300
