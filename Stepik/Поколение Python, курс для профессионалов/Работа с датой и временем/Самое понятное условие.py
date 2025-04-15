@@ -6,14 +6,17 @@ def wtf(start, end):
     start = datetime.strptime(start, pattern)
     end = datetime.strptime(end, pattern)
 
-    while start < end:
-        if (start.day + start.month)%2 == 0:
-            start = start + timedelta(days=1)
+    while True:
+        if (start.day + start.month)%2 != 0:
+            break
         else:
-            if start.weekday() != 0 and start.weekday() != 3:
-                result.append(start.strftime(pattern))
-            start = start + timedelta(days=3)
+            start = start + timedelta(days=1)
+
+    while start <= end:
+        if start.weekday() != 0 and start.weekday() != 3:
+            result.append(start.strftime(pattern))
+        start = start + timedelta(days=3)
     
     return result
 
-print(wtf(input(), input()))
+print(*wtf(input(), input()), sep='\n')
