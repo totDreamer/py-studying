@@ -3,6 +3,7 @@ from datetime import datetime, timedelta
 def most_younger(day):
     pattern = '%d.%m.%Y'
     base_day = datetime.strptime(day, pattern)
+    near_dates = [((base_day + timedelta(days=i)).day, (base_day + timedelta(days=i)).month) for i in range(8) if i!=0]
 
     people = {}
     for _ in range(int(input())):
@@ -10,19 +11,16 @@ def most_younger(day):
         birth_date = datetime.strptime(d, pattern)
         people[birth_date] = ' '.join(name)
 
-    f1, f2 = base_day - timedelta(days=7), base_day + timedelta(days=7)
     result = {}
-
     for d, name in people.items():
         try:
-            same_year_date = d.replace(year=base_day.year)
-            if f1 <= same_year_date <= f2 and same_year_date.day != base_day.day:
+            if (d.day, d.month) in near_dates:
                 result[d] = name
         except ValueError:
             continue
 
     if result:
-        return result, result[max(result)]
+        return result[max(result)]
     else:
         return 'Дни рождения не планируются'
 
