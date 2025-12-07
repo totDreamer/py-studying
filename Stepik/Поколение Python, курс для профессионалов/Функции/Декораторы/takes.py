@@ -5,7 +5,6 @@ def takes(*datatype, **datatypes):
         @wraps(f)
         def wrapper(*args, **kwargs):
             types = (*datatype, *datatypes.values())
-            print(types)
             if not all(isinstance(arg, types) for arg in (*args, *kwargs.values())):
                 raise TypeError
             result = f(*args, **kwargs)
