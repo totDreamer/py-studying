@@ -68,23 +68,23 @@ print(mutablestring)
 print()
 
 
-mutablestring1 = MutableString('bee')
-mutablestring2 = MutableString('geek')
+mutablestring1 = MutableString("bee")
+mutablestring2 = MutableString("geek")
 
 print(mutablestring1 + mutablestring2)
 print(mutablestring2 + mutablestring1)
 print()
 
 
-mutablestring = MutableString('beegeek')
+mutablestring = MutableString("beegeek")
 
 print(mutablestring)
-mutablestring[0] = 'B'
-mutablestring[-4] = 'G'
+mutablestring[0] = "B"
+mutablestring[-4] = "G"
 print(mutablestring)
 print()
 
-mutablestring = MutableString('beegeek')
+mutablestring = MutableString("beegeek")
 
 s1 = mutablestring[2:]
 s2 = mutablestring[:5]
@@ -96,7 +96,7 @@ print(s3, type(s3))
 print()
 
 
-mutablestring = MutableString('Ada Wong')
+mutablestring = MutableString("Ada Wong")
 id1 = id(mutablestring)
 
 mutablestring.upper()
@@ -106,25 +106,25 @@ print(id1 == id2)
 print()
 
 
-mutablestring = MutableString('beegeek')
+mutablestring = MutableString("beegeek")
 
-mutablestring[-1] = 'ee'
+mutablestring[-1] = "ee"
 print(mutablestring)
 
-mutablestring[-2:] = 'geek'
+mutablestring[-2:] = "geek"
 print(mutablestring)
 print()
 
 
-mutablestring = MutableString('beegeek')
+mutablestring = MutableString("beegeek")
 
 del mutablestring[1:3]
 print(mutablestring)
 print()
 
 
-mutablestring1 = MutableString('bee')
-mutablestring2 = MutableString('geek')
+mutablestring1 = MutableString("bee")
+mutablestring2 = MutableString("geek")
 
 concat = mutablestring1 + mutablestring2
 slicing = mutablestring1[1:2]
